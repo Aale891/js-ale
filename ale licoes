@@ -1,0 +1,104 @@
+!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estratégias de Persuasão</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Estratégias de Persuasão em Publicidade</h1>
+        <p>Descubra as técnicas mais utilizadas para captar atenção e influenciar decisões.</p>
+    </header>
+    <main>
+        <section id="estrategias">
+            <div class="card">
+                <h2>Escassez</h2>
+                <p>“Só até hoje! Estoque limitado!” – Criar senso de urgência aumenta o desejo de compra.</p>
+            </div>
+            <div class="card">
+                <h2>Prova Social</h2>
+                <p>“Mais de 10 mil pessoas já compraram!” – Mostrar que outros confiam no produto gera credibilidade.</p>
+            </div>
+            <div class="card">
+                <h2>Autoridade</h2>
+                <p>“Recomendado por especialistas!” – Associar um produto a figuras confiáveis fortalece sua imagem.</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>Projeto desenvolvido para estudos na Alura. <a href="#">Veja no GitHub</a></p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+---
+
+2. CSS (design da página - styles.css):
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+header {
+    background: #4CAF50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+main {
+    padding: 20px;
+}
+
+#estrategias {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 300px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #333;
+    color: white;
+}
+
+
+---
+
+3. JavaScript (interatividade - script.js):
+
+// Exemplo de interação: alert para ensinar sobre persuasão
+document.addEventListener('DOMContentLoaded', () => {
+    const cards = document.querySelectorAll('.card');
+    
+    cards.forEach(card => {
+        card.addEventListener('click', () => {
+            alert(Você aprendeu sobre: ${card.querySelector('h2').textContent});
+        });
+    });
+});
